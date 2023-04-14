@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +13,93 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  overflow-y: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+.cont {
+  margin-top:4rem;
+  height: 100vh;
+  background-color: black;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  box-sizing: border-box; /* ensure padding and border don't affect width/height */
+}
+
+/*nth child of section*/
+section:nth-child(1) {
+  background-color: red;
+}
+
+section:nth-child(2) {
+  background-color: blue;
+}
+
+section:nth-child(3) {
+  background-color: green;
+}
+
+
+
+.navigation{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar-logo{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.carousel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  box-sizing: border-box; /* ensure padding and border don't affect width/height */
+}
+
+.carousel-image{
+  object-fit: cover;
+  width: 100px;
+}
+
+.section-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-about{
+  margin-top: 2rem;
+  width: 60%;
+  background-color: azure;
+}
+
+.section-2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
