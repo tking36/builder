@@ -5,11 +5,14 @@ const Services = () => {
   return (
     <Container>
         <Row>
-            <Col xs={6} >
-                <h1>Custom Homes</h1>
+            <Col xs={4} >
+                <h1>New Construction</h1>
             </Col>
-            <Col xs={6} >
-                <h1>dddd</h1>
+            <Col xs={4} >
+                <h1>Remodeling</h1>
+            </Col>
+            <Col xs={4} >
+                <h1>Property Management</h1>
             </Col>
         </Row>
     </Container>
