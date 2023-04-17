@@ -99,9 +99,7 @@ section:nth-child(3) {
   background-color: azure;
 }
 
-.carousel{
-  height: 500px;
-}
+
 
 .section-2{
   display: flex;
@@ -129,16 +127,15 @@ section:nth-child(3) {
 }
 
 .service-1{
-  display: flex;
-  justify-content: center;
-  background-color: red;
-  height: 100%;
-  flex:1;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 
 .service-2{
-  display: flex;
+  display: none;
   justify-content: center;
   background-color: blue;
   height: 100%;
@@ -148,17 +145,17 @@ section:nth-child(3) {
 
 
 .service-3{
-  display: flex;
+  display: none;
   justify-content: center;
   background-color: rgb(169, 156, 36);
   height: 100%;
   flex:1;
 }
 
-.service-title{
-  position: absolute;
-  width: 20%;
+.service-title {
+  margin-top: 0;
   text-align: center;
+
 }
 
 .service-info-container{
@@ -169,7 +166,7 @@ section:nth-child(3) {
 }
 
 .service-info{
-  margin-top: 4rem;
+  margin-top: 1rem;
   padding: 1rem
 }
 
@@ -193,6 +190,7 @@ section:nth-child(3) {
   left: 0;
   width: 100%;
   display: flex;
+  z-index: 999;
   
 }
 
@@ -205,21 +203,12 @@ section:nth-child(3) {
 
 .nav-text{
   color: #fff; /* set the text color to white */
-  background-color: #007bff; /* set the background color to blue */
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.15rem; /* round the corners of the link */
-  text-decoration: none; /* remove the underline from the link */
-  margin-left: 2rem;
+  
 }
 
 .nav-active{
-  color: #fff; /* set the text color to white */
-  background-color:red; /* set the background color to green */
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.15rem; /* round the corners of the link */
-  text-decoration: none; /* remove the underline from the link */
-  box-shadow: 0 0 0.25rem 0.25rem rgb(255, 1, 1);
-  margin-left: 2rem;
+  color: #ff0000; /* set the text color to white */
+  
 }
 
 .navbar-logo{
@@ -268,18 +257,21 @@ section:nth-child(3) {
   flex-direction: row;
 }
 
-.phone-num{
-  margin-right: 1.5rem;
+.nav-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger{
+  margin-right: 10px !important;
 }
 
 
 
-.contact-title-nav{
-  text-align: center;
-  padding-top: 5px;
-  height: 4rem;
-  background-color: rgb(191, 121, 29);
-}
+
+
 
   form {
     max-width: 70%;
@@ -330,17 +322,183 @@ section:nth-child(3) {
     padding: 15rem;
   }
 
+  
+    /* CSS */
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
 
 
-  @media screen and (max-width: 999px) {
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+ 
+  @media screen and (min-width: 1000px) {
+    
+    
+    
+  }
+    
+  
+
+
+  @media screen and (max-width: 500px) {
     .nav-text{
       display: none;
     }
     .nav-active{
       display: none;
+
+    }
+    .carousel{
+      height: 100px;
+      margin-top: 7rem;
+      margin-bottom: 4rem;
+      width: 100%;
+    }
+    .carousel-indicators{
+      display: none;
+    }
+    .carousel-img{
+      height: 200px;
+
+      
+    }
+    .service-1 {
+      display: none;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      background-color: red;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    
+    .service-title {
+      margin-top: 0;
+      text-align: center;
+    }
+    .service-2{
+      display: none;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      background-color: rgb(7, 72, 162);
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .service-3{
+      display: none;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      background-color: rgb(243, 190, 17);
+      align-items: center;
+      justify-content: flex-start;
     }
 
+    .show{
+      display: flex;
+    }
+
+    .service-buttons{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5rem;
+    }
+
+    .service-info{
+      max-height: 350px;
+      overflow-y: auto;
+      background-color: white;
+    }
+    .button-30{
+      width: 150px;
+      font-size: 12px;
+      margin-right:10px;
+    }
+
+    form{
+      min-width: 300px;
+      max-width: 100%;
+    }
+
+    #contact{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5rem;
+      
+    }
+
+    
+
+    .email-form{
+      display: flex;
+      /* height: 300px; */
+      width: 100%;
+      
+      padding: 0;
+    }
+
+    .nav-title{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
-  
   
