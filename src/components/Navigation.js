@@ -44,9 +44,9 @@ const Navigation = () => {
             </div>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-              <Nav.Link  href="#home">Home</Nav.Link>
-              <Nav.Link href="#services">Services</Nav.Link>
-              <Nav.Link href="#contact">Contact</Nav.Link>
+              <Nav.Link active={false} className={currentSection === 'home' ? 'nav-active' : 'nav-text'}  href="#home">Home</Nav.Link>
+              <Nav.Link active={false} className={currentSection === 'services' ? 'nav-active' : 'nav-text'} href="#services">Services</Nav.Link>
+              <Nav.Link active={false} className={currentSection === 'contact' ? 'nav-active' : 'nav-text'} href="#contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

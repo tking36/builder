@@ -8,6 +8,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-y: hidden;
   background-image: url("https://cdn.pixabay.com/photo/2021/03/02/22/14/blueprint-6063929_960_720.jpg");
+  
+}
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 code {
@@ -58,15 +63,16 @@ section:nth-child(3) {
   box-sizing: border-box; /* ensure padding and border don't affect width/height */
 }
 
-.carousel-image{
-  object-fit: cover;
-  width: 100px;
+
+
+.carousel-indicators{
+  display: none;
 }
 
 .section-1{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
@@ -97,6 +103,7 @@ section:nth-child(3) {
   margin-top: 2rem;
   width: 60%;
   background-color: azure;
+  padding: 1rem;
 }
 
 
@@ -200,16 +207,17 @@ section:nth-child(3) {
   transform: translateX(-50%);
 }
 
-
-.nav-text{
-  color: #fff; /* set the text color to white */
-  
+.nav-link:hover{
+  text-shadow: #6771df 0px 0px 10px;
+  font-weight: bold;
 }
 
 .nav-active{
-  color: #ff0000; /* set the text color to white */
-  
+  color: #126473; /* set the text color to white */
 }
+
+
+
 
 .navbar-logo{
   width: 50px;
@@ -227,7 +235,7 @@ section:nth-child(3) {
   background-color: transparent !important;
 }
 
-.navbar-dark .navbar-nav .nav-link {
+/* .navbar-dark .navbar-nav .nav-link {
   color: #fff;
 }
 
@@ -235,7 +243,7 @@ section:nth-child(3) {
 .navbar-dark .navbar-nav .nav-link:focus {
   color: #fff;
   opacity: 0.8;
-}
+} */
 
 
 .navbar .my-button {
@@ -243,19 +251,6 @@ section:nth-child(3) {
 }
 
 
-.nav-link-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-
-.nav-links-child{
-  display: flex;
-  flex-direction: row;
-}
 
 .nav-title{
   display: flex;
@@ -267,10 +262,6 @@ section:nth-child(3) {
 .hamburger{
   margin-right: 10px !important;
 }
-
-
-
-
 
 
   form {
@@ -369,51 +360,131 @@ section:nth-child(3) {
   transform: translateY(2px);
 }
 
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-
-
- 
-  @media screen and (min-width: 1000px) {
-    
-    
-    
-  }
-    
   
 
 
   @media screen and (max-width: 500px) {
-    .nav-text{
-      display: none;
-    }
-    .nav-active{
-      display: none;
-
-    }
+  
     .carousel{
       height: 100px;
       margin-top: 7rem;
       margin-bottom: 4rem;
       width: 100%;
     }
-    .carousel-indicators{
-      display: none;
-    }
+   
+
     .carousel-img{
       height: 200px;
+    }
+
+    .home-about{
+      padding: 0;
+    }
+    .service-1 {
+      display: none;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      background-color: red;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    
+    .service-title {
+      margin-top: 0;
+      text-align: center;
+    }
+    .service-2{
+      display: none;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      background-color: rgb(7, 72, 162);
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .service-3{
+      display: none;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      background-color: rgb(243, 190, 17);
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .show{
+      display: flex;
+    }
+
+    .service-buttons{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5rem;
+    }
+
+    .service-info{
+      height: 350px;
+      overflow-y: auto;
+      background-color: white;
+    }
+    .button-30{
+      width: 150px;
+      font-size: 12px;
+      margin-right:10px;
+    }
+
+    form{
+      min-width: 300px;
+      max-width: 100%;
+    }
+
+    #contact{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5rem;
+      
+    }
+
+    
+
+    .email-form{
+      display: flex;
+      /* height: 300px; */
+      width: 100%;
+      
+      padding: 0;
+    }
+
+    .nav-title{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  /* ////////////////////////////////////////////////////// */
+  /* /////////////////// 7000    /////////////////////////// */
+  /* ////////////////////////////////////////////////////// */
+
+  @media screen and (max-width: 700px) and (min-width: 500px) {
+    
+
+    .section-1{
+      justify-content: start;
+    }
+
+
+    .carousel{
+      height: 100px;
+      margin-top: 10rem;
+      margin-bottom: 8rem;
+      width: 100%;
+    }
+    
+    .carousel-img{
+      height: 255px;
 
       
     }
@@ -461,7 +532,7 @@ section:nth-child(3) {
     }
 
     .service-info{
-      max-height: 350px;
+      height: 350px;
       overflow-y: auto;
       background-color: white;
     }
@@ -472,8 +543,10 @@ section:nth-child(3) {
     }
 
     form{
-      min-width: 300px;
-      max-width: 100%;
+      /* min-width: 600px;
+      max-width: 100%; */
+      width: 70rem;
+      height: 100%;
     }
 
     #contact{
@@ -501,4 +574,350 @@ section:nth-child(3) {
     }
   }
 
+
+  /* ////////////////////////////////////////////////////// */
+/* /////////////////////////700 - 1000///////////////////////// */
+/* //////////////////////////////////////////////////////// */
+
+@media screen and (max-width: 1000px) and (min-width: 700px) {
+
+
+  .section-1{
+    justify-content: start;
+  }
+
+
+  .carousel{
+    height: 200px;
+    margin-top: 11rem;
+    margin-bottom: 8rem;
+    width: 100%;
+  }
   
+  .carousel-img{
+    height: 350px;
+
+    
+  }
+  .service-1 {
+    display: none;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: red;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .service-info{
+    display: flex;
+    align-items: center;
+    width: 90%;
+  }
+  .service-title {
+    margin-top: 0;
+    text-align: center;
+  }
+  .service-2{
+    display: none;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(7, 72, 162);
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .service-3{
+    display: none;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(243, 190, 17);
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .show{
+    display: flex;
+  }
+
+  .service-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+  }
+
+  .service-info{
+    height: 350px;
+    overflow-y: auto;
+    background-color: white;
+  }
+  .button-30{
+    width: 150px;
+    font-size: 12px;
+    margin-right:10px;
+    margin-left: 10px;
+  }
+
+  form{
+    /* min-width: 600px;
+    max-width: 100%; */
+    width: 70rem;
+    height: 100%;
+  }
+
+  #contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    
+  }
+
+  
+
+  .email-form{
+    display: flex;
+    /* height: 300px; */
+    width: 100%;
+    
+    padding: 0;
+  }
+
+  .nav-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* ////////////////////////////////////////////////////// */
+/* /////////////////////////1000 - 1500///////////////////////// */
+/* //////////////////////////////////////////////////////// */
+
+
+@media screen and (max-width: 1500px) and (min-width: 1000px) {
+
+  .section-1{
+    justify-content: start;
+  }
+
+
+  .carousel{
+    height: 200px;
+    margin-top: 12rem;
+    margin-bottom: 8rem;
+    width: 80%;
+  }
+ 
+  .carousel-img{
+    height: 400px;
+    width: 200px;
+
+    
+  }
+  .home-about{
+    padding:2rem ;
+
+  }
+
+  .service-1 {
+    display: none;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: red;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .service-info{
+    display: flex;
+    align-items: center;
+    width: 90%;
+  }
+  .service-title {
+    margin-top: 0;
+    text-align: center;
+  }
+  .service-2{
+    display: none;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(7, 72, 162);
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .service-3{
+    display: none;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(243, 190, 17);
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .show{
+    display: flex;
+  }
+
+  .service-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+  }
+
+  .service-info{
+    height: 350px;
+    overflow-y: auto;
+    background-color: white;
+  }
+  .button-30{
+    width: 150px;
+    font-size: 12px;
+    margin-right:10px;
+    margin-left: 10px;
+  }
+
+  form{
+    /* min-width: 600px;
+    max-width: 100%; */
+    width: 70rem;
+    height: 100%;
+  }
+
+  #contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    
+  }
+
+  
+
+  .email-form{
+    display: flex;
+    /* height: 300px; */
+    width: 100%;
+    
+    padding: 0;
+  }
+
+  .nav-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* ///////////////////////////////////////////////////// */
+/* /////////////////////1500 - MAX/////////////////////// */
+/* ///////////////////////////////////////////////////// */
+
+
+@media screen and (min-width: 1500px) {
+
+  .section-1{
+    justify-content: start;
+  }
+
+
+  .carousel{
+    height: 200px;
+    margin-top: 12rem;
+    margin-bottom: 8rem;
+    width: 80%;
+  }
+  .carousel-indicators{
+    display: none;
+  }
+  .carousel-img{
+    height: 400px;
+    width: 200px;
+
+    
+  }
+  .home-about{
+    padding:2rem ;
+
+  }
+
+  .service-1 {
+    display: none;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: red;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .service-info{
+    display: flex;
+    align-items: center;
+    width: 90%;
+  }
+  .service-title {
+    margin-top: 0;
+    text-align: center;
+  }
+  .service-2{
+    display: none;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(7, 72, 162);
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .service-3{
+    display: none;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(243, 190, 17);
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .show{
+    display: flex;
+  }
+
+  .service-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+  }
+
+  .service-info{
+    height: 350px;
+    overflow-y: auto;
+    background-color: white;
+  }
+  .button-30{
+    width: 150px;
+    font-size: 12px;
+    margin-right:10px;
+    margin-left: 10px;
+  }
+
+  form{
+    min-width: 600px;
+    max-width: 100%; 
+    width: 70rem;
+    height: 100%;
+  }
+
+  #contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    
+  }
+
+
+}
